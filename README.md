@@ -1,4 +1,4 @@
-# 🚀 Repositório de Desenvolvimento JavaScript
+# 🚀 Repositório de Desenvolvimento Java
 
 Bem-vindo ao Repositório de Desenvolvimento Java, um espaço vibrante e interativo para professores e alunos mergulharem no universo da programação com Java! 🌐✨
 
