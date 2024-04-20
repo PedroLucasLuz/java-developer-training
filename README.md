@@ -34,6 +34,6 @@ Faça parte desta comunidade dinâmica! Contribua com seus próprios materiais, 
 
 ## Explore e Transforme Seu Aprendizado!
 
-Dê uma olhada nas pastas, experimente os desafios e crie uma jornada de aprendizado empolgante com JavaScript. Estamos aqui para ajudar você a alcançar novos patamares! 🚀💻
+Dê uma olhada nas pastas, experimente os desafios e crie uma jornada de aprendizado empolgante com Java. Estamos aqui para ajudar você a alcançar novos patamares! 🚀💻
 
 
