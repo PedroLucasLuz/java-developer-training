@@ -1,8 +1,6 @@
-/******************************************************************************
+# Questão 02: Calculadora Java
 
-Escreve um programa em Java que permita inserir dois valores numéricos e 
-então calcule o resultado das quatro operações básicas (soma, subtração, multiplicação e divisão).
+Escreva um programa em Java que permita inserir dois valores numéricos 
+e então calcule o resultado das quatro operações básicas (soma, subtração, multiplicação e divisão).
 
-Após calcular os resultados o programa deve exibi-los na tela.
-
-*******************************************************************************/
+Após calcular os resultados, o programa deve exibi-los na tela.
