@@ -1,50 +1,93 @@
 # Anatomia das Classes em Java
 
-As classes são componentes fundamentais da linguagem Java, permitindo a criação de objetos, que são instâncias dessas classes. Aqui está uma explicação simples da anatomia de uma classe em Java:
+## Declaração da Classe:
+
+Uma classe é declarada usando a palavra-chave `class`, seguida pelo nome da classe.
 
 ```java
 public class MinhaClasse {
-    // Campos (ou atributos) da classe
-    private int meuCampoInteiro;
-    private String meuCampoString;
-    
-    // Construtor da classe
-    public MinhaClasse(int inteiroInicial, String stringInicial) {
-        this.meuCampoInteiro = inteiroInicial;
-        this.meuCampoString = stringInicial;
-    }
-    
-    // Métodos da classe
-    public void meuMetodo() {
-        System.out.println("Método da classe!");
-    }
-    
-    // Getter e setter para os campos
-    public int getMeuCampoInteiro() {
-        return this.meuCampoInteiro;
-    }
-    
-    public void setMeuCampoInteiro(int novoValor) {
-        this.meuCampoInteiro = novoValor;
-    }
-    
-    public String getMeuCampoString() {
-        return this.meuCampoString;
-    }
-    
-    public void setMeuCampoString(String novoValor) {
-        this.meuCampoString = novoValor;
+    // Corpo da classe
+}
+```
+## Atributos (Variáveis de Instância):
+
+Os atributos representam as características dos objetos da classe.
+Eles são definidos dentro da classe.
+Cada objeto da classe terá suas próprias cópias dos atributos.
+
+```java
+public class MinhaClasse {
+    int idade;
+    String nome;
+}
+```
+## Métodos (Funções):
+
+Os métodos representam o comportamento dos objetos da classe.
+Eles são definidos dentro da classe.
+Os métodos podem ter parâmetros e retornar valores (ou serem void).
+
+```java
+public class MinhaClasse {
+    void mostrarNome() {
+        System.out.println(nome);
     }
 }
 ```
-- Declaração da Classe: A palavra-chave class é usada para declarar uma classe em Java. No exemplo acima, temos uma classe chamada MinhaClasse.
+## Construtores:
 
-- Campos (ou Atributos): Os campos representam os dados que pertencem a uma classe. No exemplo, meuCampoInteiro e meuCampoString são campos da classe MinhaClasse.
+Os construtores são métodos especiais usados para inicializar objetos quando são criados.
+Eles têm o mesmo nome da classe e não têm tipo de retorno explícito.
 
-- Construtor: O construtor é um método especial chamado no momento da criação de um objeto. Ele inicializa os campos da classe. No exemplo, o construtor MinhaClasse aceita dois parâmetros para inicializar os campos meuCampoInteiro e meuCampoString.
+```java
+public class MinhaClasse {
+    public MinhaClasse(int idade, String nome) {
+        this.idade = idade;
+        this.nome = nome;
+    }
+}
+```
+## Método main():
 
-- Métodos: Os métodos representam o comportamento da classe. No exemplo, meuMetodo é um método que imprime uma mensagem na saída padrão.
+O método `main()` é o ponto de entrada para a execução do programa Java.
+Ele deve ser público, estático e sem retorno.
 
-- Getters e Setters: São métodos utilizados para acessar (get) e modificar (set) os campos de uma classe de forma controlada. Eles garantem encapsulamento, permitindo o acesso seguro aos campos da classe. No exemplo, há métodos getters e setters para os campos meuCampoInteiro e meuCampoString.
+```java
+public class MinhaClasse {
+    public static void main(String[] args) {
+        // Corpo do método main
+    }
+}
+```
+## Modificadores de Acesso:
 
-Essa é uma visão básica da estrutura de uma classe em Java, mas à medida que você avança em seus estudos, encontrará conceitos mais avançados e técnicas de programação orientada a objetos em Java.
+Os modificadores de acesso controlam a visibilidade dos membros da classe (atributos, métodos, construtores).
+Os principais modificadores são `public`, `private` e `protected`.
+
+```java
+public class MinhaClasse {
+    private int idade; // Atributo privado
+    public void mostrarIdade() { // Método público
+        System.out.println(idade);
+    }
+}
+```
+## Encapsulamento:
+
+O encapsulamento é uma técnica de proteção dos atributos, tornando-os privados e fornecendo métodos públicos para acessá-los e modificá-los.
+
+```java
+public class MinhaClasse {
+    private int idade; // Atributo privado
+    
+    // Métodos públicos para acessar e modificar idade
+    public int getIdade() {
+        return idade;
+    }
+    
+    public void setIdade(int novaIdade) {
+        this.idade = novaIdade;
+    }
+}
+```
+Esses são os elementos básicos que constituem uma classe em Java. Com o tempo, você aprenderá a utilizá-los de forma mais avançada e aprofundada.
