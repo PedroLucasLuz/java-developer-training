@@ -8,11 +8,11 @@ Os tipos primitivos são os tipos de dados fundamentais em Java. Eles representa
 
 - **int:** Armazena números inteiros, por exemplo:
   ```java
-  int idade = 25;
+    int idade = 25;
 
 - **double:** Armazena números de ponto flutuante de precisão dupla, por exemplo:
   ```java
-  double pi = 3.14;
+    double pi = 3.14;
     
 - **boolean:** Armazena valores booleanos true ou false, por exemplo:
   ```java
