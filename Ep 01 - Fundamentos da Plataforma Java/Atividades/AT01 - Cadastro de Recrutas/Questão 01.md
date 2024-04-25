@@ -8,5 +8,15 @@ As informações a serem salvas são:
 - O campo de estudo
 - O ano de nascimento
 
+### Exemplos:
+
+| Atributo         | Exemplo   
+| ---------------- | ------- 
+| Primeiro Nome    | Maria 
+| Sobrenome        | Silva
+| Campo de Estudo  | Engenharia Civil
+| Ano de Nascimento| 1995
+
+
 Depois, o programa deve exibir o nome completo do recruta, seu campo de estudo e sua idade (apenas baseada no ano de nascimento).
 
