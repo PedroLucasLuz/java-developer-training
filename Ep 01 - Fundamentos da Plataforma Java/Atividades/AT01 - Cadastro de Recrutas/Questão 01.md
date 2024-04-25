@@ -1,12 +1,12 @@
-/******************************************************************************
+# Questão 01: Informações do Recruta
 
-Escreva um programa em javascript que permita salvar informações de um recruta.  As informações a serem salvas são:
+Escreva um programa em JavaScript que permita salvar informações de um recruta.
+As informações a serem salvas são:
 
-- o primeiro nome
-- o sobrenome
-- o campo de estudo
-- o ano de nascimento
+- O primeiro nome
+- O sobrenome
+- O campo de estudo
+- O ano de nascimento
 
-Depois o programa deve exibir o nome completo do recruta, seu campo de estudo e sua idade (apenas baseada no ano de nascimento).
+Depois, o programa deve exibir o nome completo do recruta, seu campo de estudo e sua idade (apenas baseada no ano de nascimento).
 
-*******************************************************************************/
