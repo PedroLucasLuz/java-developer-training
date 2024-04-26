@@ -1,4 +1,4 @@
-Escreva um programa em javascript que funcione como um conversos de medidas. O programa 
+Escreva um programa em java que funcione como um conversos de medidas. O programa 
 deverá pedir por um valor em metros e então dar a opção de escolher para qual unidade de
 medida esse valor deve ser convertido. As opções são:
 
