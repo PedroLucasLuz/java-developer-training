@@ -1,6 +1,6 @@
 # Visitando Novas Cidades
 
-Escreva um programa em javascript que peça o nome de 
+Escreva um programa em java que peça o nome de 
 um turista e então pergunte se ele já visitou alguma 
 cidade. Caso a resposta seja sim, pergunte o nome da 
 cidade e o armazene em uma variável, e então continue 
