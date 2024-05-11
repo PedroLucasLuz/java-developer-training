@@ -1,57 +1,67 @@
 import java.util.concurrent.ThreadLocalRandom;
+
 public class App {
+    private static final int MAX_TENTATIVAS = 3;
+    private static final int MAX_CANDIDATOS_SELECIONADOS = 5;
+    private static final double SALARIO_BASE = 2000.0;
+    private static final String[] CANDIDATOS = {"Felipe", "Marcia", "Júlia", "Paulo", "Augusto", "Pedro", "Lucas"};
+
     public static void main(String[] args) {
-        System.out.println("Processo Seletivo");
-        imprimirSelecionados();
-
-    }
-    
-    static void imprimirSelecionados(){
-        String  [] $candidatos = {"Felipe", "Marcia", "Júlia", "Paulo", "Augusto", "Pedro", "Lucas"};
-        System.out.println("Imprimindo a lista de candidatos selecionados");
-
-        for (int i = 0; i < $candidatos.length ; i++) {
-            System.out.println("O candidato de nº " + (i + 1) + " é " + $candidatos[i]);
+        for (String candidato : CANDIDATOS) {
+            entrandoEmContato(candidato);
         }
 
-        System.out.println("Forma abreviada de iteração");
+        imprimirSelecionados();
+        selecaoDeCandidatos();
+    }
 
-        for (String candidato : $candidatos){
+    static void entrandoEmContato(String candidato) {
+        int tentativasRealizadas = 1;
+        boolean continuarTentando = true;
+        boolean atendeu = false;
+        do {
+            atendeu = atender();
+            continuarTentando = !atendeu;
+            if (continuarTentando)
+                tentativasRealizadas++;
+            else
+                System.out.println("CONTATO REALIZADO COM SUCESSO");
+        } while (continuarTentando && tentativasRealizadas < MAX_TENTATIVAS);
+
+        if (atendeu)
+            System.out.println("CONSEGUIMOS CONTATO COM " + candidato + " NA " + tentativasRealizadas + " TENTATIVA");
+        else
+            System.out.println("NÃO CONSEGUIMOS CONTATO COM " + candidato + ", NÚMERO MAXIMO TENTATIVAS " + tentativasRealizadas + " REALIZADA");
+    }
+
+    static boolean atender() {
+        return ThreadLocalRandom.current().nextInt(3) == 1;
+    }
+
+    static void imprimirSelecionados() {
+        System.out.println("Imprimindo a lista de candidatos selecionados");
+        System.out.println("Forma abreviada de iteração");
+        for (String candidato : CANDIDATOS) {
             System.out.println("O candidato selecionado foi " + candidato);
         }
     }
-    static void selecaoDeCandidatos(){
-        String  [] $candidatos = {"Felipe", "Marcia", "Júlia", "Paulo", "Augusto", "Pedro", "Lucas"};
 
-        int $CandidatosSelecionados = 0;
-        int $CandidatoAtual = 0;
-        double $SalarioBase = 2000.0;
-        while ($CandidatosSelecionados < 5 && $CandidatoAtual < $candidatos.length) {
-            String $Candidato = $candidatos [$CandidatoAtual];
-            double $SalarioPretendido = valorPretendido();
+    static void selecaoDeCandidatos() {
+        System.out.println("Iniciando seleção de candidatos...");
+        int candidatosSelecionados = 0;
 
-            System.out.println("O candidato " + $Candidato + " solicitou este valor de salário " + $SalarioPretendido);
-            if ($SalarioBase >= $SalarioPretendido) {
-                System.out.println("O candidato " + $Candidato + " foi selecionado para a vaga");
-                $CandidatosSelecionados++;
+        for (String candidato : CANDIDATOS) {
+            double salarioPretendido = valorPretendido();
+            System.out.println("O candidato " + candidato + " solicitou este valor de salário " + salarioPretendido);
+            if (SALARIO_BASE >= salarioPretendido && candidatosSelecionados < MAX_CANDIDATOS_SELECIONADOS) {
+                System.out.println("O candidato " + candidato + " foi selecionado para a vaga");
+                candidatosSelecionados++;
             }
-            $CandidatoAtual++;
         }
     }
 
-    static double valorPretendido(){
+    static double valorPretendido() {
         return ThreadLocalRandom.current().nextDouble(1800, 2200);
     }
-
-    static void analisarCandidato(double $SalarioPretendido){
-        double $SalarioBase = 2000.0;
-
-        if ($SalarioBase > $SalarioPretendido){
-            System.out.println("Ligar Para o Candidato");
-        }else if ($SalarioBase == $SalarioPretendido){
-            System.out.println("Ligar Para o Candidato Com Contra Proposta");
-        }else {
-            System.out.println("Aguardando o Resultado Dos Demais Candidatos");
-        }
-    }
 }
+
